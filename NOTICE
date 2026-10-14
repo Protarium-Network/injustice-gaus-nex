@@ -1,0 +1,22 @@
+This server is built on the Pretendo Network NEX stack:
+
+  - github.com/PretendoNetwork/nex-go
+  - github.com/PretendoNetwork/nex-protocols-go
+  - github.com/PretendoNetwork/nex-protocols-common-go
+  - github.com/PretendoNetwork/plogger-go
+
+all licensed under the GNU Affero General Public License v3.0.
+
+internal/nex-protocols-common-go-patch/ is a vendored fork of
+nex-protocols-common-go with local DataStore changes (an S3 presigner and
+adjusted DataStore method behaviour). It keeps its own upstream AGPL-3.0
+LICENSE.
+
+The matchmaking.* / tracking.* PostgreSQL schema is created by
+nex-protocols-common-go itself (CommonProtocol.SetManager);
+docs/matchmaking-schema.md keeps a reference map of that layout.
+
+The Injustice: Gods Among Us NEX configuration (game server ID 10111700 /
+269555456, access key 65e9f4d6) comes from the public kinnay.github.io Wii U
+NEX database, cross-referenced with the retail RPX. No proprietary Nintendo
+or Warner Bros. / NetherRealm code or assets are included.
